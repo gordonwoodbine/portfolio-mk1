@@ -1,0 +1,132 @@
+@import 'variables';
+@import 'animations';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.intro {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url('../img/blue-bricks.jpg') center no-repeat;
+  background-size: cover;
+  z-index: -5000;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.logo h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 18rem;
+  color: $neonColor;
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ef44ff, 0 0 0.5em #ef44ff,
+    0 0 0.1em #ef44ff, 0 10px 3px #000;
+  animation: blink 10s infinite;
+  z-index: -5000;
+}
+
+.intro-arrow {
+  position: absolute;
+  bottom: 10rem;
+  cursor: pointer;
+}
+
+.intro-arrow i {
+  font-size: 8rem;
+  color: $specialYellow;
+  transition: transform 0.4s ease;
+  margin: 0 1rem;
+}
+
+.intro-arrow i:hover {
+  transform: scale(1.1);
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  height: 6rem;
+  background-color: $specialPink;
+  flex-direction: row;
+  box-shadow: 0.2rem 0.2rem 0.5rem #e41c6f;
+}
+
+.navbar-link {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0 3rem;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.about {
+  height: 100vh;
+  background: #fff;
+}
+
+.greeting {
+  width: 60%;
+  line-height: 9rem;
+  font-size: 6rem;
+  font-weight: 700;
+  color: #fff;
+  background-color: $specialYellow;
+  padding: 1rem 3rem;
+  margin-bottom: 5rem;
+  text-align: center;
+  // text-transform: uppercase;
+  // letter-spacing: 1rem;
+  border-bottom: 0.3rem solid #222;
+  text-shadow: 0.2rem 0.2rem 1rem #555;
+  transform: skew(-10deg);
+}
+
+// Media Query Zone
+
+@media screen and (max-width: 1270px) {
+  .logo h1 {
+    font-size: 15rem;
+  }
+}
+
+@media screen and (max-width: 1028px) {
+  .logo h1 {
+    font-size: 12rem;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .logo h1 {
+    font-size: 8rem;
+  }
+
+  .intro-arrow i {
+    font-size: 6rem;
+  }
+}

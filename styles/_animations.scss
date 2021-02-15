@@ -1,0 +1,23 @@
+// Lovely Neon Sign Blinking Thing
+
+@keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #c587c3;
+    text-shadow: none;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    color: #ffb8fb;
+    text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ef44ff, 0 0 0.5em #ef44ff,
+      0 0 0.1em #ef44ff, 0 10px 3px #000;
+  }
+}
